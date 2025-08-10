@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+#levelUpMsg {
+  display: none;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  animation: fadePop 1s ease forwards;
+}
+
+@keyframes fadePop {
+  0% { transform: scale(0.8); opacity: 0; }
+  40% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: auto;
+}
+
+.lineOne, .lineTwo {
+  display: flex;
+}
+
+.btn {
+  height: 22vw;
+  width: 22vw;
+  max-height: 160px;
+  max-width: 160px;
+  border-radius: 20%;
+  margin: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.red { background: #d95980; }
+.yellow { background: #f99b45; }
+.green { background: #63aac0; }
+.purple { background: #819ff9; }
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.flash {
+  box-shadow: 0 0 25px white, 0 0 45px currentColor;
+}
+
+.userflash {
+  transform: scale(1.05);
+}
+
+body.game-over {
+  animation: shake 0.45s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.scoreboard {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .btn { height: 28vw; width: 28vw; }
+}
