@@ -22,6 +22,14 @@ document.addEventListener("click", function () {
      }
  });
 
+document.addEventListener("touchstart", function () {
+    if (!started) {
+        console.log("game is started");
+        started = true;
+        levelup();
+    }
+});
+
 function gameflash(btn){
     btn.classList.add("flash");
     setTimeout(function(){
@@ -87,4 +95,5 @@ function reset(){
     userSeq=[];
     level=0;
 }
+
 
