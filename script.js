@@ -14,14 +14,13 @@ document.addEventListener("keypress", function(){
     }
 })
 
-document.addEventListener("click", function () {
-     if (!started) {
-         console.log("game is started");
-         started = true;
-         levelup();
-     }
- });
-
+// document.addEventListener("click", function () {
+//     if (!started) {
+//         console.log("game is started");
+//         started = true;
+//         levelup();
+//     }
+// });
 document.addEventListener("touchstart", function () {
     if (!started) {
         console.log("game is started");
@@ -95,6 +94,3 @@ function reset(){
     userSeq=[];
     level=0;
 }
-
-
-
